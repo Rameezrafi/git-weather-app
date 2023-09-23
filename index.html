@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+J0fPXJ9qxcN6f5+y4wFNKb7F+xHVVq2K3jso/If2tx5q2hf" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+</head>
+<body style="background:url(./image/fbby1h_1.webp); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover;background-position: center;">
+   <main class="container">
+       <div class="box container w-75">
+        <h1   class="cloudy-text" style="color: white; font-size: 50px; margin-top: 150px; margin-left: 100px;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><style>svg{fill:#080808}</style><path d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V144c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"/></svg> <span id="temperature" >30 </span><br> <span id="weather-description">Cloudy</span></h1>
+        <h2  class="cloudy-text1" style="color: white; font-size: 40px; margin-top: -250px; margin-left: 100px; display: flex; flex-direction: column; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><style>svg{fill:#d4c94c}</style><path d="M288 0c17.7 0 32 14.3 32 32V49.7C451.8 63.4 557.7 161 573.9 285.9c2 15.6-17.3 24.4-27.8 12.7C532.1 283 504.8 272 480 272c-38.7 0-71 27.5-78.4 64.1c-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C359 299.5 326.7 272 288 272s-71 27.5-78.4 64.1c-1.7 8.7-8.7 15.9-17.6 15.9s-15.8-7.2-17.6-15.9C167 299.5 134.7 272 96 272c-24.8 0-52.1 11-66.1 26.7C19.4 310.4 .1 301.5 2.1 285.9C18.3 161 124.2 63.4 256 49.7V32c0-17.7 14.3-32 32-32zm0 304c12.3 0 23.5 4.6 32 12.2V430.6c0 45-36.5 81.4-81.4 81.4c-30.8 0-59-17.4-72.8-45l-2.3-4.7c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l2.3 4.7c3 5.9 9 9.6 15.6 9.6c9.6 0 17.4-7.8 17.4-17.4V316.2c8.5-7.6 19.7-12.2 32-12.2z"/></svg><br><span id="location">Palakkad</span> <br><span  id="date">22/9/2023</span></h2>  
+    </div>
+          <div id="searchCity"  class="search" style="margin-left: 450px;">
+              <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="search city" aria-label="Search" style="width: 400px; border-radius: 20px; height: 30px; font-weight: 800;">
+      <button id="searchButton" class="btn btn-outline-success" type="submit" style="height: 30px;width: 80px; border-radius: 10px; background-color:aqua; color:black;">Search</button>
+    </form>
+          </div>
+
+<div id="displayData" class="rightSideContainer">
+  <div class="moreInfoContainer">
+    <ul class="InfoList">
+      <li class="infoItem" style="color: white; font-size: 25px; font-weight: 800; margin-left: -500px; margin-top: 20px; display: flex; flex-direction: column; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+          <style>svg{fill:#fcfbf0}</style>
+          <path d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V144c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"/>
+        </svg>
+        <span >Temp-Max</span>
+        <span id="temp-max"  class="value">32°</span>
+      </li>
+      <li class="infoItem" style="color: white; font-size: 25px; font-weight: 800; margin-left: -100px; margin-top: -80px; display: flex; flex-direction: column; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+          <style>svg{fill:#fcfbf0}</style>
+          <path d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V144c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"/>
+        </svg>
+        <span >Temp-Min</span>
+        <span id="temp-min" class="value">32°</span>
+      </li>
+      <li class="infoItem" style="color: white; font-size: 25px; font-weight: 800;margin-left: 300px; margin-top: -80px; display: flex; flex-direction: column; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+        <style>svg{fill:#fcfbf0}</style>
+        <path d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/>
+        </svg>
+        <span  >Wind Speed</span>
+        <span id="wind-speed" class="value">1.47m/h</span>
+      </li>
+      <li class="infoItem" style="color: white; font-size: 25px; font-weight: 800;margin-left: 700px; margin-top: -80px; display: flex; flex-direction: column; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+          <style>svg{fill:#fcfbf0}</style>
+          <path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/>
+        </svg>
+        <span >Humidity</span>
+        <span id="humidity" class="value">74%</span>
+      </li>
+    </ul>
+  </div>
+</div>
+    </main>
+</body>
+<script>
+  // Function to display weather data
+function displayData(data) {
+  document.getElementById("temperature").innerHTML = data.main.temp + "°C";
+  document.getElementById("weather-description").innerHTML = data.weather[0].description;
+  document.getElementById("location").innerHTML = data.name;
+  document.getElementById("date").innerHTML = new Date(data.dt * 1000).toLocaleDateString();
+  document.getElementById("temp-max").innerHTML = data.main.temp_max + "°C";
+  document.getElementById("temp-min").innerHTML = data.main.temp_min + "°C";
+  document.getElementById("wind-speed").innerHTML = data.wind.speed + "m/h";
+  document.getElementById("humidity").innerHTML = data.main.humidity + "%";
+}
+
+// Fetch weather data
+fetch('https://api.openweathermap.org/data/2.5/weather?q=palakkad&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric')
+  .then(result => result.json())
+  .then(data => displayData(data))
+  .catch(error => console.error("Error fetching data: " + error));
+
+</script>
+
+</html> 
+
+
